@@ -10,7 +10,7 @@ st.title(":cup_with_straw: Customize your smoothie! :cup_with_straw:")
 cnx = st.connection('snowflake')
 session = cnx.session()
 
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME', col('SEARCH_ON'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'), col('SEARCH_ON'))
 st.stop()
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
